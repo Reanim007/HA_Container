@@ -8,7 +8,7 @@ services:
     # devices:
     #   - /dev/ttyUSB0:/dev/ttyACM0
     environment:
-      - TZ=Europe/Moscow
+      - TZ=Asia/Qyzylorda
       - MQTT_SERVER=mqtt://mosquitto
     ports:
       - "8080:8080"
