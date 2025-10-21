@@ -1,0 +1,12 @@
+services:
+  portainer:
+    container_name: portainer
+    image: portainer/portainer-ce:latest
+    command: -H unix:///var/run/docker.sock
+    restart: always
+    ports:
+      - "9000:9000" # Используем порт, выбранный пользователем
+      - "8000:8000"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /udobnidom/portainer/data:/data # Путь для данных Portainer согласно вашей структуре
