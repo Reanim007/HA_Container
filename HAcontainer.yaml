@@ -5,6 +5,7 @@ services:
     image: homeassistant/home-assistant:latest
     volumes:
       - /udobnidom/homeassistant/config:/config
+      - /udobnidom/homeassistant/media:/media
       - /etc/localtime:/etc/localtime:ro
       - /run/dbus:/run/dbus:ro         # Для Bluetooth, NetworkManager и других системных служб
       - /var/run/docker.sock:/var/run/docker.sock:ro # !!! ОЧЕНЬ ОПАСНО !!! Дает полный контроль над Docker на хосте
