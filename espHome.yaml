@@ -2,7 +2,7 @@ version: '2.4'
 services:
   esphome:
     platform: linux/arm64/v8
-    image: ghcr.io/esphome/esphome:latest
+    image: ghcr.io/esphome/esphome:dev
     container_name: esphome
     restart: unless-stopped
     network_mode: host
