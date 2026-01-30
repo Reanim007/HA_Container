@@ -12,8 +12,6 @@ services:
     restart: unless-stopped
     networks:
       - homeiot_internal
-    env_file:
-      - stack.env
 networks:
   homeiot_internal:
     external: true
