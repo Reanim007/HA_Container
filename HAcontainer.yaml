@@ -1,8 +1,10 @@
-version: '3.8'
 services:
   homeassistant:
     container_name: homeassistant
     image: homeassistant/home-assistant:latest
+    labels:
+      wud.watch.digest: "true"
+      wud.registry.url: "https://registry-1.docker.io"
     volumes:
       - /udobnidom/homeassistant/config:/config
       - /udobnidom/homeassistant/media:/media
