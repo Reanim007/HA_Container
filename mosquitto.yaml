@@ -2,6 +2,9 @@ services:
   mosquitto:
     container_name: mosquitto
     image: eclipse-mosquitto:latest
+    labels:
+      wud.watch.digest: "true"
+      wud.registry.url: "https://registry-1.docker.io"
     volumes:
       - /udobnidom/mosquitto/config:/mosquitto/config
       - /udobnidom/mosquitto/data:/mosquitto/data
