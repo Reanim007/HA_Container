@@ -1,8 +1,10 @@
-version: '3.8'
 services:
   app:
     image: jc21/nginx-proxy-manager:latest
     container_name: nginx-proxy-manager
+    labels:
+      wud.watch.digest: "true"
+      wud.registry.url: "https://registry-1.docker.io"
     restart: unless-stopped
     ports:
       - '80:80'   # HTTP-трафик
